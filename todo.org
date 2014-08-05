@@ -1,5 +1,13 @@
 * DONE create base repos - https://github.com/requirejs/example-libglobal
 * TODO Import some tooling from james - https://github.com/foguinhoperuca/JAMES
+** TODO app/js
+** TODO app/tests
+** DONE bower
+** DONE gruntjs
+** DONE jshint
+** DONE .gitignore
+** DONE package.json
+* TODO Implement _.exports
 * TODO publish
 ** TODO bower
 ** TODO github
