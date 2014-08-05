@@ -1,0 +1,5 @@
+* DONE create base repos - https://github.com/requirejs/example-libglobal
+* TODO Import some tooling from james - https://github.com/foguinhoperuca/JAMES
+* TODO publish
+** TODO bower
+** TODO github

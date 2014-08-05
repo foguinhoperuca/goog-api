@@ -1,0 +1,22 @@
+{
+	"name": "google-docs-api",
+	"version": "0.0.1",
+	"repository": "git@github.com:foguinhoperuca/google-docs-api.git",
+	"author": {
+		"name": "Jefferson Campos",
+		"email": "jefferson@jeffersoncampos.eti.br",
+		"url": "http://jeffersoncampos.eti.br"
+	},
+	"amd": {},
+	"devDependencies": {
+		"grunt": "^0.4.5",
+		"jit-grunt": "^0.7.0",
+		"grunt-contrib-jshint": "^0.10.0",
+		"grunt-contrib-watch": "^0.6.1",
+		"grunt-contrib-requirejs": "^0.4.3",
+		"grunt-contrib-copy": "^0.5.0",
+		"grunt-contrib-clean": "^0.5.0",
+		"grunt-contrib-compress": "^0.10.0",
+		"grunt-exec": "^0.4.6"
+	}
+}

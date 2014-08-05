@@ -1,0 +1,10 @@
+{
+	"name": "{%= name %}",
+	"version": "{%= version %}",
+	"description": "{%= description %}",
+	"dependencies": {
+		"jquery": "latest",
+		"underscore": "latest",
+		"requirejs": "latest"
+	}
+}
