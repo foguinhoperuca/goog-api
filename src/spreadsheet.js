@@ -7,10 +7,9 @@ define([
 ], function (_, $) {
     'use strict';
 
-	var spreadsheet = function (text) {
+	var spreadsheet = function () {
 		this.sayHello = function(name) {
 			var hello = 'Hello, ' + name + '! Nice to meet you!!';
-			console.log(hello);
 
 			return hello;
 		};

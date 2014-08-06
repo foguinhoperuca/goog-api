@@ -6,5 +6,8 @@
 		"jquery": "latest",
 		"underscore": "latest",
 		"requirejs": "latest"
+	},
+	"devDependencies": {
+		"jasmine": "~2.0.1"
 	}
 }
