@@ -4,11 +4,11 @@
     } else {
         root.GDAPI = factory(root.spreadsheet);
     }
-}(this, function (spreadsheet) {
+}(this, function (Spreadsheet) {
 	'use strict';
 
     return {
-        version: '0.0.1, jQuery version is: ' + $.fn.jquery,
-        spreedsheet: spreadsheet
+        version: '0.0.1',
+        spreadsheet: new Spreadsheet()
     };
 }));

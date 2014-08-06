@@ -1,13 +1,13 @@
 require.config({
 	urlArgs: 'cb=' + Math.random(),
-	baseUrl: '../../src',
+	baseUrl: '../../',
 	paths: {
-		'jquery': '../bower_components/jquery/dist/jquery.min',
-		'underscore': '../bower_components/underscore/underscore',
+		'jquery': 'bower_components/jquery/dist/jquery.min',
+		'underscore': 'bower_components/underscore/underscore',
 
-		'jasmine': '../bower_components/jasmine/lib/jasmine-core/jasmine'
-		, 'jasmine-html': '../bower_components/jasmine/lib/jasmine-core/jasmine-html'
-		, 'jasmine-boot': '../bower_components/jasmine/lib/jasmine-core/boot'
+		'jasmine': 'bower_components/jasmine/lib/jasmine-core/jasmine'
+		, 'jasmine-html': 'bower_components/jasmine/lib/jasmine-core/jasmine-html'
+		, 'jasmine-boot': 'bower_components/jasmine/lib/jasmine-core/boot'
 	},
 	shim: {
 		'jquery': {
@@ -35,7 +35,8 @@ require([
 	'jasmine-boot'
 ], function(Jasmine) {
 	require([
-		'../tests/jasmine/specs/spreadsheetSpec'
+		'tests/jasmine/specs/spreadsheetSpec',
+		'tests/jasmine/specs/GDAPISpec'
 	], function() {
 		window.onload();
 	});

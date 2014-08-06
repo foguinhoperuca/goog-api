@@ -1,5 +1,5 @@
 define([
-	'spreadsheet'
+	'src/spreadsheet'
 ], function (Spreadsheet) {
 	'use strict';
 
