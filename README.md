@@ -1,3 +1,3 @@
-# google-docs-api
+# GOOG-API
 
-Simple lib to work with google docs.
+Simple lib to work with google's API.

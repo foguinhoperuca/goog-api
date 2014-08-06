@@ -48,16 +48,19 @@ module.exports = function(grunt) {
 		, requirejs: {
 			compile: {
 				options: {
-					baseUrl: "lib",
-					// mainConfigFile: "lib/main.js",
-					// name: "main",
-					out: "build/main.min.js",
-					preserveLicenseComments: false
+					baseUrl: ".",
+					mainConfigFile: "main.js",
+					name: "main",
+					out: "build/goog-api.min.js",
+					preserveLicenseComments: false,
 
-					, "wrap": {
-						"startFile": "wrap.start",
-						"endFile": "wrap.end"
-					}
+				    include: ["bower_components/almond/almond", "goog-api", "src/spreadsheet"]
+				    // exclude: ["jquery", "underscore"]
+
+					// , "wrap": {
+					// 	"startFile": "wrap.start",
+					// 	"endFile": "wrap.end"
+					// }
 				}
 				// {
 				//     "baseUrl": "../lib",

@@ -1,13 +1,14 @@
 {
-	"name": "{%= name %}",
-	"version": "{%= version %}",
-	"description": "{%= description %}",
-	"dependencies": {
-		"jquery": "latest",
-		"underscore": "latest",
-		"requirejs": "latest"
-	},
-	"devDependencies": {
-		"jasmine": "~2.0.1"
-	}
+  "name": "{%= name %}",
+  "version": "{%= version %}",
+  "description": "{%= description %}",
+  "dependencies": {
+    "jquery": "latest",
+    "underscore": "latest",
+    "requirejs": "latest"
+  },
+  "devDependencies": {
+    "jasmine": "~2.0.1",
+    "almond": "~0.2.9"
+  }
 }
