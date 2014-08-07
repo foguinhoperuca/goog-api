@@ -36,7 +36,7 @@ require([
 ], function(Jasmine) {
 	require([
 		'tests/jasmine/specs/spreadsheetSpec',
-		'tests/jasmine/specs/GDAPISpec'
+		'tests/jasmine/specs/GOOGAPISpec'
 	], function() {
 		window.onload();
 	});

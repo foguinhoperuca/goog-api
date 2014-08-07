@@ -49,82 +49,34 @@ module.exports = function(grunt) {
 			compile: {
 				options: {
 					baseUrl: ".",
-					mainConfigFile: "main.js",
-					name: "main",
+					paths: {
+						'goog-api': 'goog-api'
+						, 'jquery': 'bower_components/jquery/dist/jquery'
+						, 'underscore': 'bower_components/underscore/underscore'
+					},
 					out: "build/goog-api.min.js",
 					preserveLicenseComments: false,
-
-				    include: ["bower_components/almond/almond", "goog-api", "src/spreadsheet"]
-				    // exclude: ["jquery", "underscore"]
-
-					// , "wrap": {
-					// 	"startFile": "wrap.start",
-					// 	"endFile": "wrap.end"
-					// }
+				    include: ["goog-api"],
+				    exclude: ["jquery", "underscore"]
+					, optimize: 'uglify2'
+					, generateSourceMaps: true
 				}
-				// {
-				//     "baseUrl": "../lib",
-				//     "paths": {
-				//         "principium": "../principium"
-				//     },
-				//     "include": ["../tools/almond", "principium"],
-				//     "exclude": ["jquery", "underscore"],
-				//     "out": "../dist/principium.js",
-				//     "wrap": {
-				//         "startFile": "wrap.start",
-				//         "endFile": "wrap.end"
-				//     }
-				// }
 			}
 		}
-		// , copy: {
-		// 	dist: {
-		// 		files: [
-		// 			// chrome
-		// 			{
-		// 				src: 'app/js/chrome.js',
-		// 				dest: 'dist/app/js/chrome.js'
-		// 			},
-		// 			{
-		// 				src: 'manifest.json',
-		// 				dest: 'dist/'
-		// 			},
-		// 			{
-		// 				src: 'app/js/libs/bower/requirejs/require.js',
-		// 				dest: 'dist/app/js/require.js'
-		// 			},
-		// 			{
-		// 				expand: true,
-		// 				cwd: 'app/js/libs/bower/bootstrap/fonts',
-		// 				src: '**',
-		// 				dest: 'dist/app/fonts',
-		// 				flatten: false
-		// 			},
-		// 			{
-		// 				expand: true,
-		// 				cwd: 'app/img',
-		// 				src: '**',
-		// 				dest: 'dist/app/img',
-		// 				flatten: false
-		// 			},
-		// 			{
-		// 				expand: true,
-		// 				cwd: 'app/data',
-		// 				src: ['**/*.json', '!test/'],
-		// 				dest: 'dist/app/data',
-		// 				flatten: false
-		// 			},
-		// 			// FIXME use jquery-ui via bower instead!!!
-		// 			{
-		// 				expand: true,
-		// 				cwd: 'app/css/jquery-ui/images',
-		// 				src: ['**'],
-		// 				dest: 'dist/app/css/images',
-		// 				flatten: false
-		// 			}
-		// 		]
-		// 	}
-		// }
+		, copy: {
+			james: {
+				files: [
+					{
+						src: 'build/goog-api.min.js',
+						dest: '../james/app/js/libs/custom/goog-api.min.js'
+					},
+					{
+						src: 'build/goog-api.min.js.map',
+						dest: '../james/app/js/libs/custom/goog-api.min.js.map'
+					}
+				]
+			}
+		}
 		// , exec: {
 		// 	deploy_ffxos: {
 		// 		cwd: '../ffxos',
@@ -140,5 +92,5 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('build', ['clean', 'copy', 'requirejs']);
-	grunt.registerTask('dev', ['handlebars', 'watch']);
+	grunt.registerTask('james', ['requirejs', 'copy:james']);
 };

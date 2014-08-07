@@ -1,7 +1,7 @@
 * DONE create base repos - https://github.com/requirejs/example-libglobal
 * TODO Import some tooling from james - https://github.com/foguinhoperuca/JAMES
 ** TODO app/js
-** TODO app/tests
+** DONE app/tests
 ** DONE bower
 ** DONE gruntjs
 ** DONE jshint
@@ -11,3 +11,4 @@
 * TODO publish
 ** TODO bower
 ** TODO github
+* TODO FIX global and make more amd friendly
