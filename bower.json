@@ -1,7 +1,13 @@
 {
-  "name": "{%= name %}",
-  "version": "{%= version %}",
-  "description": "{%= description %}",
+  "name": "goog-api",
+  "version": "0.0.1",
+  "description": "Simple lib to work with google api.",
+	"main": "dist/goog-api.min.js",
+	"author": [
+			"Jefferson Campos"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/foguinhoperuca/goog-api",
   "dependencies": {
     "jquery": "latest",
     "underscore": "latest",

@@ -64,6 +64,14 @@ module.exports = function(grunt) {
 			}
 		}
 		, copy: {
+			bower: {
+				files: [
+					{
+						src: 'build/goog-api.min.js',
+						dest: 'dist/goog-api.min.js'
+					}
+				]
+			},
 			james: {
 				files: [
 					{
@@ -93,4 +101,5 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', ['clean', 'copy', 'requirejs']);
 	grunt.registerTask('james', ['requirejs', 'copy:james']);
+	grunt.registerTask('bower', ['requirejs', 'copy:bower']);
 };
