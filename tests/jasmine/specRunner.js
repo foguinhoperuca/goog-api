@@ -35,8 +35,8 @@ require([
 	'jasmine-boot'
 ], function(Jasmine) {
 	require([
-		'tests/jasmine/specs/spreadsheetSpec',
-		'tests/jasmine/specs/GOOGAPISpec'
+		'tests/jasmine/specs/spreadsheetSpec'
+		, 'tests/jasmine/specs/GOOGAPISpec'
 	], function() {
 		window.onload();
 	});

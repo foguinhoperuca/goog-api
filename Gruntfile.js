@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-	require('jit-grunt')(grunt, {
-		useminPrepare: 'grunt-useminPrepare'
-	});
+	require('jit-grunt')(grunt);
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -46,6 +44,22 @@ module.exports = function(grunt) {
 			}
 		}
 		, requirejs: {
+			'goog-api': {
+				options: {
+					baseUrl: ".",
+					paths: {
+						'goog-api': 'goog-api'
+						, 'jquery': 'bower_components/jquery/dist/jquery'
+						, 'underscore': 'bower_components/underscore/underscore'
+					},
+					out: "build/goog-api.min.js",
+					preserveLicenseComments: false,
+				    include: ["goog-api"],
+				    exclude: ["jquery", "underscore"]
+					, optimize: 'uglify2'
+					, generateSourceMaps: true
+				}
+			},
 			spreadsheet: {
 				options: {
 					baseUrl: ".",
@@ -67,6 +81,14 @@ module.exports = function(grunt) {
 			bower: {
 				files: [
 					{
+						src: 'build/goog-api.min.js',
+						dest: 'dist/goog-api.min.js'
+					},
+					{
+						src: 'build/goog-api.min.js.map',
+						dest: 'dist/goog-api.min.js.map'
+					},
+					{
 						src: 'build/spreadsheet.min.js',
 						dest: 'dist/spreadsheet.min.js'
 					},
@@ -79,6 +101,14 @@ module.exports = function(grunt) {
 			james: {
 				files: [
 					{
+						src: 'build/goog-api.min.js',
+						dest: '../james/app/js/libs/custom/goog-api.min.js'
+					},
+					{
+						src: 'build/goog-api.min.js.map',
+						dest: '../james/app/js/libs/custom/goog-api.min.js.map'
+					},
+					{
 						src: 'build/spreadsheet.min.js',
 						dest: '../james/app/js/libs/custom/spreadsheet.min.js'
 					},
@@ -89,18 +119,6 @@ module.exports = function(grunt) {
 				]
 			}
 		}
-		// , exec: {
-		// 	deploy_ffxos: {
-		// 		cwd: '../ffxos',
-		// 		cmd: 'git commit -am "Deploy JAMES version <%= pkg.version %>" && git push github gh-pages'
-		// 	}			
-		// }
-		// , watch: {
-		// 	templates: {
-		// 		files: ['app/templates/**/*.tpl'],
-		// 		tasks: ['handlebars']
-		// 	}
-		// }
 	});
 
 	grunt.registerTask('build', ['clean', 'copy', 'requirejs']);

@@ -1,6 +1,7 @@
 {
 	"name": "goog-api",
-	"version": "0.0.2",
+	"main": "dist/goog-api.js",
+	"version": "0.0.3",
 	"description": "Simple lib to work with google api.",
 	"author": [
 		"Jefferson Campos"

@@ -11,6 +11,15 @@
 	'use strict';
 
 	return {
+		url: undefined,
+		key: undefined,
+
+		extend: function(args) {
+			return _.extend({}, this, args);
+		},
+
+
+
 		sayHello: function(name) {
 			var hello = 'Hello, ' + name + '! Nice to meet you!!';
 

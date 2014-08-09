@@ -5,7 +5,8 @@ define([
 
 	describe('GOOGAPI.', function() {
 		it('Should say a personalized hello (SPREADSHEET).', function() {
-			expect('Hello, GOOGAPI! Nice to meet you!!').toEqual(GOOGAPI.spreadsheet.sayHello('GOOGAPI'));
+			var spreadsheet = GOOGAPI.Spreadsheet.extend();
+			expect('Hello, GOOGAPI! Nice to meet you!!').toEqual(spreadsheet.sayHello('GOOGAPI'));
 		});
 	});
 });

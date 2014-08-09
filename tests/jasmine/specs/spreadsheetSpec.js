@@ -5,8 +5,8 @@ define([
 
 	describe('Spreadsheet.', function() {
 		it('Should say a personalized hello.', function() {
-			var spreadsheet = new Spreadsheet();
-			expect('Hello, GDAPI! Nice to meet you!!').toEqual(spreadsheet.sayHello('GDAPI'));
+			var spreadsheet = Spreadsheet.extend();
+			expect('Hello, spreadsheet! Nice to meet you!!').toEqual(spreadsheet.sayHello('spreadsheet'));
 		});
 	});
 });
