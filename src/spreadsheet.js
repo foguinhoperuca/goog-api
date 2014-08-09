@@ -18,7 +18,9 @@
 			return _.extend({}, this, args);
 		},
 
-
+		sync: function(data, sheet) {
+			throw new Error('Not implemented yet!');
+		},
 
 		sayHello: function(name) {
 			var hello = 'Hello, ' + name + '! Nice to meet you!!';
