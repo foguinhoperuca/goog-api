@@ -58,8 +58,8 @@ module.exports = function(grunt) {
 					preserveLicenseComments: false,
 				    include: ["spreadsheet"],
 				    exclude: ["jquery", "underscore"]
-					, optimize: 'none'
-					, generateSourceMaps: false
+					, optimize: 'uglify2'
+					, generateSourceMaps: true
 				}
 			}
 		}
@@ -69,6 +69,10 @@ module.exports = function(grunt) {
 					{
 						src: 'build/spreadsheet.min.js',
 						dest: 'dist/spreadsheet.min.js'
+					},
+					{
+						src: 'build/spreadsheet.min.js.map',
+						dest: 'dist/spreadsheet.min.js.map'
 					}
 				]
 			},

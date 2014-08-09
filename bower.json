@@ -1,20 +1,19 @@
 {
-  "name": "goog-api",
-  "version": "0.0.1",
-  "description": "Simple lib to work with google api.",
-	"main": "dist/goog-api.min.js",
+	"name": "goog-api",
+	"version": "0.0.2",
+	"description": "Simple lib to work with google api.",
 	"author": [
-			"Jefferson Campos"
+		"Jefferson Campos"
 	],
 	"license": "MIT",
 	"homepage": "https://github.com/foguinhoperuca/goog-api",
-  "dependencies": {
-    "jquery": "latest",
-    "underscore": "latest",
-    "requirejs": "latest"
-  },
-  "devDependencies": {
-    "jasmine": "~2.0.1",
-    "almond": "~0.2.9"
-  }
+	"dependencies": {
+		"jquery": "latest",
+		"underscore": "latest",
+		"requirejs": "latest"
+	},
+	"devDependencies": {
+		"jasmine": "~2.0.1",
+		"almond": "~0.2.9"
+	}
 }
