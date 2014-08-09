@@ -1,21 +1,20 @@
 /*jslint nomen: true */
 /*global define */
 
-define([
-	'underscore'
-	, 'jquery'
-], function (_, $) {
-    'use strict';
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+		define(['jquery', 'underscore'], factory);
+    } else {
+        root.GOOGAPI_SPREADSHEET = factory(root.$, root._);
+    }
+}(this, function ($, _) {
+	'use strict';
 
-	var spreadsheet = function () {
-		this.sayHello = function(name) {
+	return {
+		sayHello: function(name) {
 			var hello = 'Hello, ' + name + '! Nice to meet you!!';
 
 			return hello;
-		};
-
-        return this;
-    };
-
-	return spreadsheet;
-});
+		}
+	};
+}));

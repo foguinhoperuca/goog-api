@@ -46,20 +46,20 @@ module.exports = function(grunt) {
 			}
 		}
 		, requirejs: {
-			compile: {
+			spreadsheet: {
 				options: {
 					baseUrl: ".",
 					paths: {
-						'goog-api': 'goog-api'
+						'spreadsheet': 'src/spreadsheet'
 						, 'jquery': 'bower_components/jquery/dist/jquery'
 						, 'underscore': 'bower_components/underscore/underscore'
 					},
-					out: "build/goog-api.min.js",
+					out: "build/spreadsheet.min.js",
 					preserveLicenseComments: false,
-				    include: ["goog-api"],
+				    include: ["spreadsheet"],
 				    exclude: ["jquery", "underscore"]
-					, optimize: 'uglify2'
-					, generateSourceMaps: true
+					, optimize: 'none'
+					, generateSourceMaps: false
 				}
 			}
 		}
@@ -67,20 +67,20 @@ module.exports = function(grunt) {
 			bower: {
 				files: [
 					{
-						src: 'build/goog-api.min.js',
-						dest: 'dist/goog-api.min.js'
+						src: 'build/spreadsheet.min.js',
+						dest: 'dist/spreadsheet.min.js'
 					}
 				]
 			},
 			james: {
 				files: [
 					{
-						src: 'build/goog-api.min.js',
-						dest: '../james/app/js/libs/custom/goog-api.min.js'
+						src: 'build/spreadsheet.min.js',
+						dest: '../james/app/js/libs/custom/spreadsheet.min.js'
 					},
 					{
-						src: 'build/goog-api.min.js.map',
-						dest: '../james/app/js/libs/custom/goog-api.min.js.map'
+						src: 'build/spreadsheet.min.js.map',
+						dest: '../james/app/js/libs/custom/spreadsheet.min.js.map'
 					}
 				]
 			}
