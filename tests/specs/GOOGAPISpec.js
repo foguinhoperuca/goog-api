@@ -1,11 +1,12 @@
 define([
 	'../../../goog-api'
-], function (GOOGAPI) {
+	, 'text!package.json'
+], function (GOOGAPI, PackageJSON) {
 	'use strict';
 
 	describe('GOOGAPI.', function() {
 		it('Should show the version.', function() {
-			expect('0.0.7').toEqual(GOOGAPI.VERSION);
+			expect(JSON.parse(PackageJSON).version).toEqual(GOOGAPI.VERSION);
 		});
 	});
 });
