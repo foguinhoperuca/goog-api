@@ -1,12 +1,13 @@
 {
 	"name": "goog-api",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"main": "dist/goog-api.js",
 	"ignore": [
 		"**/*",
 		"!dist/*",
 		"!LICENSE",
-		"!README.md"
+		"!README.md",
+		"!package.json"
 	],
 	"description": "Simple lib to work with google api.",
 	"author": [
