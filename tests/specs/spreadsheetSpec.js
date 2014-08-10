@@ -6,11 +6,11 @@ define([
 	var spreadsheet = Spreadsheet.extend({key: '1O3k3wgYs_4uzl8Pjghq57Xygzj2DymRmR6cr269bAbg'});
 
 	describe('Spreadsheet.', function() {
-		describe('Push.', function() {
+		describe('Pull.', function() {
 			var email;
 
 			beforeEach(function(done) {
-				spreadsheet.push(function(data) {
+				spreadsheet.pull(function(data) {
 					console.log('test');
 					console.log(data.feed.author[0].email.$t);
 

@@ -3,15 +3,15 @@
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-		define(['jquery', 'underscore', 'src/spreadsheet'], factory);
+		define(['jquery', 'underscore', 'src/spreadsheet', 'text!package.json'], factory);
     } else {
-        root.GOOGAPI_SPREADSHEET = factory(root.$, root._, root.Spreadsheet);
+        root.GOOGAPI_SPREADSHEET = factory(root.$, root._, root.Spreadsheet, root.BowerJSON);
     }
-}(this, function ($, _, Spreadsheet) {
+}(this, function ($, _, Spreadsheet, PackageJSON) {
 	'use strict';
 
 	return {
-		version: '0.0.5',
+		VERSION: JSON.parse(PackageJSON).version,
 		Spreadsheet: Spreadsheet
 	};
 }));

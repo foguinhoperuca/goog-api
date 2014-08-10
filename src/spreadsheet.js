@@ -30,7 +30,7 @@
 			return this.baseURL + this.feed + '/' + this.key + '/' + this.worksheet + '/' + this.visibility + '/' + this.projection;
 		},
 
-		push: function(callback) {
+		pull: function(callback) {
 			var self = this;
 
 			$.ajax({

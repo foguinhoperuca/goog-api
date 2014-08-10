@@ -6,4 +6,5 @@
 ** DONE jshint
 ** DONE .gitignore
 ** DONE package.json
-* TODO Implement _.exports
+* TODO Integrate package.json with bower.json - https://www.npmjs.org/package/grunt-write-bower-json
+* DONE Implement _.exports

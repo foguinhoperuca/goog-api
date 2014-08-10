@@ -1,6 +1,6 @@
 {
 	"name": "goog-api",
-	"version": "0.0.4",
+	"version": "0.0.6",
 	"main": "dist/goog-api.js",
 	"ignore": [
 		"**/*",
@@ -16,7 +16,8 @@
 	"homepage": "https://github.com/foguinhoperuca/goog-api",
 	"dependencies": {
 		"jquery": "latest",
-		"underscore": "latest"
+		"underscore": "latest",
+		"requirejs-text": "~2.0.12"
 	},
 	"devDependencies": {
 		"jasmine": "~2.0.1",

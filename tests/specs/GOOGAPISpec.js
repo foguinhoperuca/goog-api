@@ -5,7 +5,7 @@ define([
 
 	describe('GOOGAPI.', function() {
 		it('Should show the version.', function() {
-			expect('0.0.3').toEqual(GOOGAPI.version);
+			expect('0.0.6').toEqual(GOOGAPI.VERSION);
 		});
 	});
 });

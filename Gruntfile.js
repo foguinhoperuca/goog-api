@@ -49,13 +49,14 @@ module.exports = function(grunt) {
 					baseUrl: ".",
 					paths: {
 						'goog-api': 'goog-api'
+						, 'text': 'bower_components/requirejs-text/text'
 						, 'jquery': 'bower_components/jquery/dist/jquery'
 						, 'underscore': 'bower_components/underscore/underscore'
 					},
 					out: "build/goog-api.min.js",
 					preserveLicenseComments: false,
 				    include: ["goog-api"],
-				    exclude: ["jquery", "underscore"]
+				    exclude: ["text", "jquery", "underscore"]
 					, optimize: 'uglify2'
 					, generateSourceMaps: true
 				}
@@ -65,13 +66,14 @@ module.exports = function(grunt) {
 					baseUrl: ".",
 					paths: {
 						'spreadsheet': 'src/spreadsheet'
+						, 'text': 'bower_components/requirejs-text/text'
 						, 'jquery': 'bower_components/jquery/dist/jquery'
 						, 'underscore': 'bower_components/underscore/underscore'
 					},
 					out: "build/spreadsheet.min.js",
 					preserveLicenseComments: false,
 				    include: ["spreadsheet"],
-				    exclude: ["jquery", "underscore"]
+				    exclude: ["text", "jquery", "underscore"]
 					, optimize: 'uglify2'
 					, generateSourceMaps: true
 				}
