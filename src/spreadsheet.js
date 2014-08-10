@@ -12,10 +12,10 @@
 
 	return {
 		version: '3.0',
-		baseUrl: 'http://spreadsheet.google.com/feeds/',
-		feed: 'list',
+		baseURL: 'http://spreadsheet.google.com/feeds/',
+		feed: 'cells',
 		key: undefined,
-		worksheet: 1,
+		worksheet: 'od6',
 		visibility: 'public',
 		projection: 'full',
 
@@ -27,11 +27,21 @@
 		},
 
 		url: function() {
-			return this.baseURL + this.feed + this.key + this.worksheet + this.visibility + this.projection;
+			return this.baseURL + this.feed + '/' + this.key + '/' + this.worksheet + '/' + this.visibility + '/' + this.projection;
 		},
 
-		sync: function(data, worksheet) {
-			throw new Error('Not implemented yet!');
+		push: function(callback) {
+			var self = this;
+
+			$.ajax({
+				type: 'GET',
+				async: false,
+				url: self.url() + '?alt=json-in-script',
+				jsonp: 'callback',
+				dataType: "jsonp",
+				contentType: "application/json",
+				success: callback
+			});
 		},
 
 		sayHello: function(name) {
