@@ -6,10 +6,6 @@ define([
 	var spreadsheet = Spreadsheet.extend({key: '1O3k3wgYs_4uzl8Pjghq57Xygzj2DymRmR6cr269bAbg'});
 
 	describe('Spreadsheet.', function() {
-		it('Should say a personalized hello.', function() {
-			expect('Hello, spreadsheet! Nice to meet you!!').toEqual(spreadsheet.sayHello('spreadsheet'));
-		});
-
 		describe('Push.', function() {
 			var email;
 

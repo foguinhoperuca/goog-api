@@ -11,7 +11,7 @@
 	'use strict';
 
 	return {
-		version: '0.0.3',
+		version: '0.0.5',
 		Spreadsheet: Spreadsheet
 	};
 }));

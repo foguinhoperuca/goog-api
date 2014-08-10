@@ -42,12 +42,6 @@
 				contentType: "application/json",
 				success: callback
 			});
-		},
-
-		sayHello: function(name) {
-			var hello = 'Hello, ' + name + '! Nice to meet you!!';
-
-			return hello;
 		}
 	};
 }));
