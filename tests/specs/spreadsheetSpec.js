@@ -24,5 +24,13 @@ define([
 				expect('foguinho.peruca@gmail.com').toEqual(email);
 			});
 		});
+
+		describe('Push.', function() {
+			it('Should create new worksheet.', function() {
+				spreadsheet.newWorksheet({title: 'test_create_worksheet', gs: {rowCount: 10, colCount: 15}});
+
+				expect(true).toEqual(true);
+			});
+		});
 	});
 });
