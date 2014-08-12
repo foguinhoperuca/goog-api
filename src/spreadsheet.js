@@ -37,8 +37,6 @@
 				url = this.baseURL + this.feed + '/' + this.key + '/' + this.worksheet + '/' + this.visibility + '/' + this.projection;
 			}
 
-console.log(url + '?alt=json');
-
 			return url;
 		},
 
@@ -57,29 +55,21 @@ console.log(url + '?alt=json');
 			});
 		},
 
-		newWorksheet: function(feed) {
+		// TODO implement push data back to google spreadsheet.
+		// It's hard to use google spreadsheat api. See another solution
+		push: function(data) {
 			var self = this;
+			self.feed = 'list';
 
-console.log(feed);
-
-			// Create new worksheet
-			self.feed = 'worksheets';
 			$.ajax({
-				data: feed,
-				type: 'POST',
+				type: 'GET',
 				async: false,
-				url: self.url('worksheets') + '?alt=json',
-				jsonp: 'callback',
-				dataType: 'jsonp',
-				contentType: "application/json",
+				url: this.url(),
 				success: function(data) {
-					console.log('Created new spreadsheet');
+					console.log('Send data to google api!!');
 					console.log(data);
 				}
 			});
-
-			// Send data
-
 		}
 	};
 }));

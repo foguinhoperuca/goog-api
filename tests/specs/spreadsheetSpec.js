@@ -11,11 +11,7 @@ define([
 
 			beforeEach(function(done) {
 				spreadsheet.pull(function(data) {
-					console.log('test');
-					console.log(data.feed.author[0].email.$t);
-
 					email = data.feed.author[0].email.$t;
-
 					done();
 				});
 			});
@@ -25,12 +21,11 @@ define([
 			});
 		});
 
-		describe('Push.', function() {
-			it('Should create new worksheet.', function() {
-				spreadsheet.newWorksheet({title: 'test_create_worksheet', gs: {rowCount: 10, colCount: 15}});
-
-				expect(true).toEqual(true);
-			});
-		});
+		// describe('Push.', function() {
+		// 	it('Should create new worksheet.', function() {
+		// 		spreadsheet.push({entry: {id: 8, dia: 'TER'}});
+		// 		expect(true).toEqual(true);
+		// 	});
+		// });
 	});
 });
