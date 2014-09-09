@@ -104,19 +104,19 @@ module.exports = function(grunt) {
 				files: [
 					{
 						src: 'build/goog-api.min.js',
-						dest: '../james/app/js/libs/custom/goog-api.min.js'
+						dest: '../james/app/js/libs/custom/test-dev/goog-api/goog-api.min.js'
 					},
 					{
 						src: 'build/goog-api.min.js.map',
-						dest: '../james/app/js/libs/custom/goog-api.min.js.map'
+						dest: '../james/app/js/libs/custom/test-dev/goog-api/goog-api.min.js.map'
 					},
 					{
 						src: 'build/spreadsheet.min.js',
-						dest: '../james/app/js/libs/custom/spreadsheet.min.js'
+						dest: '../james/app/js/libs/custom/test-dev/goog-api/spreadsheet.min.js'
 					},
 					{
 						src: 'build/spreadsheet.min.js.map',
-						dest: '../james/app/js/libs/custom/spreadsheet.min.js.map'
+						dest: '../james/app/js/libs/custom/test-dev/goog-api/spreadsheet.min.js.map'
 					}
 				]
 			}
